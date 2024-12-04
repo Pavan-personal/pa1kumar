@@ -164,9 +164,9 @@ const Portfolio = () => {
       type: "Full-time",
       period: "2024 July - Present",
       achievements: [
-        "Part of front-end team.",
+        "Developed and maintained web applications using React.",
         "Improved system performance by 40%.",
-        "Got a chance to work with react virtualized and debouncing.",
+        "Used virtualization to reduce costs by 20%.",
       ],
     },
     {
@@ -285,7 +285,6 @@ const Portfolio = () => {
                       const tooltip = document.createElement("div");
                       tooltip.className = "tooltip";
                       tooltip.textContent = section.label;
-                      // Add tooltip styles and positioning
                     }}
                   >
                     <Icon size={20} />
@@ -305,49 +304,49 @@ const Portfolio = () => {
 
       <section
         id="home"
-        className="min-h-screen overflow-hidden relative flex items-center justify-center"
+        className="min-h-screen overflow-hidden relative flex items-center justify-center px-4 pt-16 md:pt-0"
       >
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className="flex-1 text-left"
+              className="flex-1 text-center lg:text-left"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="mb-6"
+                className="mb-6 pt-12 sm:pt-0"
               >
-                <span className="text-purple-400 text-xl font-medium">
+                <span className="text-purple-400 text-lg md:text-xl font-medium">
                   Heyy, I'm
                 </span>
-                <h1 className="text-7xl font-bold mt-2">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-2">
                   <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Pavan Kumar
                   </span>
                 </h1>
-                <h2 className="text-5xl font-bold mt-2 text-white">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 text-white">
                   Expect less & be amazed!
                 </h2>
               </motion.div>
 
               <motion.p
-                className="text-xl text-gray-400 mb-8 max-w-xl"
+                className="text-base md:text-xl text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                I’m a full-stack web developer skilled in MERN and Next.js. I do
-                freelancing and contribute to open-source. Right now, I’m
-                exploring WebSockets, webRTC and Web3. Let’s connect if you have
-                any project in your mind! (Hack: I'm a good prompt engineer! 😁)
+                I'm a full-stack web developer skilled in MERN and Next.js. I do
+                freelancing and contribute to open-source. Right now, I'm
+                exploring WebSockets, webRTC and Web3. Let's connect if you have
+                any project in your mind! (PS: I'm a good prompt engineer! 😁)
               </motion.p>
 
               <motion.div
-                className="flex gap-6"
+                className="flex justify-center lg:justify-start gap-4 md:gap-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -356,16 +355,16 @@ const Portfolio = () => {
                   whileHover={{ scale: 1.05 }}
                   href="#contact"
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full font-semibold group relative overflow-hidden"
+                  className="px-6 md:px-8 py-2 md:py-3 text-sm md:text-base bg-gradient-to-r from-blue-500 to-purple-500 rounded-full font-semibold"
                 >
-                  <span className="relative z-10">Connect</span>
+                  Connect
                 </motion.a>
 
                 <motion.a
                   href="https://drive.google.com/file/d/1W2GzkqbvAi-WgyfrS5LDK38aZJuYt_S-/view?usp=sharing"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-gray-800 rounded-full font-semibold border border-gray-700 hover:bg-gray-700 transition-colors"
+                  className="px-6 md:px-8 py-2 md:py-3 text-sm md:text-base bg-gray-800 rounded-full font-semibold border border-gray-700 hover:bg-gray-700 transition-colors"
                 >
                   Resume
                 </motion.a>
@@ -376,10 +375,29 @@ const Portfolio = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
+              className="flex-1 sm:hidden relative mt-8 md:mt-0 w-full max-w-xs md:max-w-none mx-auto"
+            >
+              <motion.div
+                className="relative z-10 w-full max-w-[400px] aspect-[4/5] mx-auto"
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <Image
+                  src={MyImg}
+                  alt="Picture of the author"
+                  className="w-full h-full rounded-xl object-cover object-center"
+                />
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
               className="flex-1 relative"
             >
               <motion.div
-                className="relative z-10 w-[400px] h-[500px] mx-auto"
+                className="relative hidden sm:visible z-10 w-[400px] h-[500px] mx-auto"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -500,80 +518,81 @@ const Portfolio = () => {
             </span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <InteractiveCard key={index} className="p-6">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  className="p-6"
-                >
-                  <div className="relative h-36 mb-4 rounded-lg overflow-hidden group">
-                    <Image
-                      src={
-                        index === 0
-                          ? project1
-                          : index === 1
-                          ? project2
-                          : project3
-                      }
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                      transition={{ duration: 0.2 }} // Add smooth transition
-                      className="absolute inset-0 bg-black/60 flex items-center justify-center gap-6"
-                    >
-                      <motion.a
-                        href={project.links?.github}
-                        className="text-white p-2 bg-gray-800/50 rounded-full hover:bg-gray-700/50"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        whileInView={{ scale: 2 }}
-                        transition={{ type: "tween" }}
+          <div className="">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.map((project, index) => (
+                <InteractiveCard key={index} className="p-6">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="p-6"
+                  >
+                    <div className="relative h-36 mb-4 rounded-lg overflow-hidden group">
+                      <Image
+                        src={
+                          index === 0
+                            ? project1
+                            : index === 1
+                            ? project2
+                            : project3
+                        }
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                        transition={{ duration: 0.2 }} 
+                        className="absolute inset-0 bg-black/60 flex items-center justify-center gap-6"
                       >
-                        <Github size={24} />
-                      </motion.a>
-                      <motion.a
-                        href={project.links?.live}
-                        className="text-white p-2 bg-gray-800/50 rounded-full hover:bg-gray-700/50"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        transition={{ type: "tween" }}
-                      >
-                        <ExternalLink size={24} />
-                      </motion.a>
-                    </motion.div>
-                  </div>
-                  {/* Rest of the code remains the same */}
-                  <motion.div>
-                    <h3 className="text-xl font-semibold mb-2 text-white">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech?.map((tech, index) => (
-                        <motion.span
-                          key={index}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.1 }}
-                          className="px-3 py-1 text-xs font-medium bg-gray-800/50 text-gray-300 rounded-full 
-                          border border-gray-700/50 backdrop-blur-sm"
+                        <motion.a
+                          href={project.links?.github}
+                          className="text-white p-2 bg-gray-800/50 rounded-full hover:bg-gray-700/50"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                          transition={{ type: "tween" }}
                         >
-                          {tech}
-                        </motion.span>
-                      ))}
+                          <Github size={24} />
+                        </motion.a>
+                        <motion.a
+                          href={project.links?.live}
+                          className="text-white p-2 bg-gray-800/50 rounded-full hover:bg-gray-700/50"
+                          whileHover={{ scale: 1.1 }}
+                          whileTap={{ scale: 0.95 }}
+                          transition={{ type: "tween" }}
+                        >
+                          <ExternalLink size={24} />
+                        </motion.a>
+                      </motion.div>
                     </div>
+                    <motion.div>
+                      <h3 className="text-xl font-semibold mb-2 text-white">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-400 mb-4 text-sm leading-relaxed">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech?.map((tech, index) => (
+                          <motion.span
+                            key={index}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: index * 0.1 }}
+                            className="px-3 py-1 text-xs font-medium bg-gray-800/50 text-gray-300 rounded-full 
+                          border border-gray-700/50 backdrop-blur-sm"
+                          >
+                            {tech}
+                          </motion.span>
+                        ))}
+                      </div>
+                    </motion.div>
                   </motion.div>
-                </motion.div>
-              </InteractiveCard>
-            ))}
+                </InteractiveCard>
+              ))}
+            </div>
+
             <InteractiveCard
               className="text-center col-span-3 text-gray-400 text-[1.1rem] mt-8
              font-semibold border-none flex flex-col py-2 bg-none bg-transparent
@@ -618,7 +637,9 @@ const Portfolio = () => {
                       <p className="text-gray-400">{job.company}</p>
                     </div>
                     <div className="flex items-center gap-2 flex-col">
-                      <span className="text-gray-500">{job.period}</span>
+                      <span className="text-gray-500 text-right">
+                        {job.period}
+                      </span>
                       <span className="text-gray-500 self-end place-self-end">
                         {" "}
                         {job.type}{" "}
