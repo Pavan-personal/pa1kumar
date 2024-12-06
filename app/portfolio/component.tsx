@@ -14,7 +14,6 @@ import {
   Send,
   Code,
   Briefcase,
-  Mail,
   Cpu,
   Globe,
   Terminal,
@@ -27,10 +26,9 @@ import Image from "next/image";
 
 const CursorFollower = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [gitMaximized, setGitMaximized] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener("mousemove", handleMouseMove);
@@ -51,18 +49,22 @@ const CursorFollower = () => {
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
 
-  const [messageSent, setMessageSent] = useState({
-    email: "",
-    message: "",
-  });
+  const InteractiveCard = ({
+    children,
+    className = "",
+  }: {
+    children: React.ReactNode;
+    className?: string;
+  }) => {
+    const [mousePosition, setMousePosition] = useState<{
+      x: number;
+      y: number;
+    }>({ x: 0, y: 0 });
+    const cardRef = useRef<HTMLDivElement>(null);
 
-  const InteractiveCard = ({ children, className = "" }) => {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const cardRef = useRef(null);
-
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
       if (!cardRef.current) return;
-      const rect = cardRef.current.getBoundingClientRect();
+      const rect: DOMRect = cardRef.current.getBoundingClientRect();
       setMousePosition({
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
@@ -199,19 +201,6 @@ const Portfolio = () => {
     },
   ];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const email = e.target.elements.email.value;
-    const message = e.target.elements.message.value;
-
-    if (!email || !message) {
-      alert("Please fill in all fields");
-      return;
-    }
-    alert("Message sent successfully!");
-    e.target.reset();
-  };
-
   return (
     <div className="bg-[#050507] select-none min-h-screen text-gray-200">
       <CursorFollower />
@@ -321,7 +310,7 @@ const Portfolio = () => {
                 className="mb-6 pt-12 sm:pt-0"
               >
                 <span className="text-purple-400 text-lg md:text-xl font-medium">
-                  Heyy, I'm
+                  Heyy, I&apos;m
                 </span>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-2">
                   <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -339,10 +328,11 @@ const Portfolio = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                I'm a full-stack web developer skilled in MERN and Next.js. I do
-                freelancing and contribute to open-source. Right now, I'm
-                exploring WebSockets, webRTC and Web3. Let's connect if you have
-                any project in your mind! (PS: I'm a good prompt engineer! 😁)
+                I&apos;m a full-stack web developer skilled in MERN and Next.js.
+                I do freelancing and contribute to open-source. Right now,
+                I&apos;m exploring WebSockets, webRTC and Web3. Let&apos;s
+                connect if you have any project in your mind! (PS: I&apos;m a
+                good prompt engineer! 😁)
               </motion.p>
 
               <motion.div
@@ -666,7 +656,7 @@ const Portfolio = () => {
         >
           <h2 className="text-4xl font-bold mb-12 text-center">
             <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-              Current I'm focusing on...
+              Current I&apos;m focusing on...
             </span>
           </h2>
 
@@ -725,9 +715,9 @@ const Portfolio = () => {
             className="mt-12 text-center text-gray-400"
           >
             <p className="max-w-2xl mx-auto">
-              I'm very happy if anyone is interested in collaborating with me in
-              learning Web3 and feel free to connect with me on my email, if
-              you're into web3 and interested in hackathons & crypto....
+              I&apos;m very happy if anyone is interested in collaborating with
+              me in learning Web3 and feel free to connect with me on my email,
+              if you&apos;re into web3 and interested in hackathons & crypto....
             </p>
           </motion.div>
 
