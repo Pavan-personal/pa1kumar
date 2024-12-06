@@ -90,7 +90,6 @@ const Portfolio = () => {
     { id: "projects", icon: Code, label: "Projects" },
     { id: "experience", icon: Briefcase, label: "Experience" },
     { id: "interests", icon: Heart, label: "Interests" },
-    { id: "contact", icon: Mail, label: "Contact" },
   ];
 
   const skills = [
@@ -732,58 +731,57 @@ const Portfolio = () => {
             </p>
           </motion.div>
 
-          <h2 className="text-4xl font-bold text-center">
-            <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-              My Socials
-            </span>
-          </h2>
+          <div className="flex flex-col rounded-lg my-6 items-center py-6 relative justify-center sm:gap-6 bg-[rgba(0,0,0,0.5)]">
+            <div className="flex rounded-lg sm:my-6 items-center py-6 relative justify-center gap-6">
+              <motion.a
+                href="https://github.com/Pavan-personal"
+                whileHover={{ scale: 1.1 }}
+                className="p-4 z-10 bg-white rounded-full transition-colors opacity-85"
+              >
+                <Image
+                  src={github}
+                  height={30}
+                  style={{
+                    opacity: 0.8,
+                  }}
+                  alt="Picture of the author"
+                />
+              </motion.a>
+              <motion.a
+                href="mailto:kumarpavan39877@gmail.com"
+                whileHover={{ scale: 1.1 }}
+                className="p-4 z-10 bg-white rounded-full transition-colors opacity-85"
+              >
+                <Image
+                  src={mail}
+                  height={30}
+                  style={{
+                    opacity: 0.8,
+                  }}
+                  alt="Picture of the author"
+                />
+              </motion.a>
+              <motion.a
+                href="https://x.com/Mithabhashi__"
+                whileHover={{ scale: 1.1 }}
+                className="p-4 z-10 bg-white rounded-full transition-colors opacity-85"
+              >
+                <Image
+                  src={X}
+                  height={30}
+                  style={{
+                    opacity: 0.8,
+                  }}
+                  alt="Picture of the author"
+                />
+              </motion.a>
+            </div>
 
-          <div id="contact" className="flex justify-center gap-6">
-            <motion.a
-              href="https://github.com/Pavan-personal"
-              whileHover={{ scale: 1.1 }}
-              className="p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
-            >
-              <Image
-                src={github}
-                height={30}
-                style={{
-                  filter: "invert(100%)",
-                  opacity: 0.8,
-                }}
-                alt="Picture of the author"
-              />
-            </motion.a>
-            <motion.a
-              href="mailto:kumarpavan39877@gmail.com"
-              whileHover={{ scale: 1.1 }}
-              className="p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
-            >
-              <Image
-                src={mail}
-                height={30}
-                style={{
-                  filter: "invert(100%)",
-                  opacity: 0.8,
-                }}
-                alt="Picture of the author"
-              />
-            </motion.a>
-            <motion.a
-              href="https://x.com/Mithabhashi__"
-              whileHover={{ scale: 1.1 }}
-              className="p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
-            >
-              <Image
-                src={X}
-                height={30}
-                style={{
-                  filter: "invert(100%)",
-                  opacity: 0.8,
-                }}
-                alt="Picture of the author"
-              />
-            </motion.a>
+            <h2 className="text-[4.5rem] sm:text-[7rem] opacity-60 sm:absolute static sedgwick-ave-display-regular font-bold text-center">
+              <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                My Socials
+              </span>
+            </h2>
           </div>
         </motion.div>
       </section>
