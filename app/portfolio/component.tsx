@@ -48,6 +48,7 @@ const CursorFollower = () => {
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const resumeLink = "https://drive.google.com/uc?export=download&id=1W2GzkqbvAi-WgyfrS5LDK38aZJuYt_S-";
 
   const InteractiveCard = ({
     children,
@@ -351,7 +352,8 @@ const Portfolio = () => {
                 </motion.a>
 
                 <motion.a
-                  href="https://drive.google.com/file/d/1W2GzkqbvAi-WgyfrS5LDK38aZJuYt_S-/view?usp=sharing"
+                  href={resumeLink}
+                  download="Pavans_Resume.pdf"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-6 md:px-8 py-2 md:py-3 text-sm md:text-base bg-gray-800 rounded-full font-semibold border border-gray-700 hover:bg-gray-700 transition-colors"
