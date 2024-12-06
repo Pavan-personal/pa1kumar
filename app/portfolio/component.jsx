@@ -663,7 +663,7 @@ const Portfolio = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="max-w-6xl mx-auto"
+          className="max-w-6xl mx-auto flex flex-col gap-[2rem]"
         >
           <h2 className="text-4xl font-bold mb-12 text-center">
             <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
@@ -728,11 +728,17 @@ const Portfolio = () => {
             <p className="max-w-2xl mx-auto">
               I'm very happy if anyone is interested in collaborating with me in
               learning Web3 and feel free to connect with me on my email, if
-              you're into web3 and interested in hackathons & crypto..
+              you're into web3 and interested in hackathons & crypto....
             </p>
           </motion.div>
 
-          <div id="contact" className="mt-12 flex justify-center gap-6">
+          <h2 className="text-4xl font-bold text-center">
+            <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+              My Socials
+            </span>
+          </h2>
+
+          <div id="contact" className="flex justify-center gap-6">
             <motion.a
               href="https://github.com/Pavan-personal"
               whileHover={{ scale: 1.1 }}
