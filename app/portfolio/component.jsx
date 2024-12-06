@@ -8,6 +8,7 @@ import mail from "./image/email.png";
 import project1 from "./image/project1.png";
 import project2 from "./image/project2.png";
 import project3 from "./image/project3.png";
+import "./portfolio.css";
 import {
   Github,
   Send,
@@ -391,76 +392,69 @@ const Portfolio = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className="flex-1 relative"
+              className="image-container relative z-10 w-[400px] h-[500px] mx-auto"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
               <motion.div
-                className="relative hidden sm:visible z-10 w-[400px] h-[500px] mx-auto"
-                whileHover={{ scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl transform rotate-6"
+                animate={{
+                  rotate: [6, -2, 6],
+                  scale: [1, 1.02, 1],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              />
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl transform -rotate-6"
+                animate={{
+                  rotate: [-6, 2, -6],
+                  scale: [1, 1.02, 1],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              />
+              <div className="relative z-10 w-full h-full rounded-3xl overflow-hidden border-2 border-gray-800 bg-[#0C0C14]">
+                <Image
+                  src={MyImg}
+                  alt="Picture of the author"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent" />
+              </div>
+
+              <motion.div
+                className="absolute -right-8 top-10 p-4 bg-[#0C0C14]/80 backdrop-blur-xl rounded-xl border border-gray-800"
+                animate={{
+                  y: [0, 10, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
               >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl transform rotate-6"
-                  animate={{
-                    rotate: [6, -2, 6],
-                    scale: [1, 1.02, 1],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                />
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl transform -rotate-6"
-                  animate={{
-                    rotate: [-6, 2, -6],
-                    scale: [1, 1.02, 1],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                />
-                <div className="relative z-10 w-full h-full rounded-3xl overflow-hidden border-2 border-gray-800 bg-[#0C0C14]">
-                  <Image
-                    src={MyImg}
-                    alt="Picture of the author"
-                    className="w-full h-full object-cover object-center"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent" />
-                </div>
+                <Code className="w-6 h-6 text-purple-400" />
+              </motion.div>
 
-                <motion.div
-                  className="absolute -right-8 top-10 p-4 bg-[#0C0C14]/80 backdrop-blur-xl rounded-xl border border-gray-800"
-                  animate={{
-                    y: [0, 10, 0],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                >
-                  <Code className="w-6 h-6 text-purple-400" />
-                </motion.div>
-
-                <motion.div
-                  className="absolute -left-8 bottom-20 p-4 bg-[#0C0C14]/80 backdrop-blur-xl rounded-xl border border-gray-800"
-                  animate={{
-                    y: [0, -10, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                >
-                  <Globe className="w-6 h-6 text-blue-400" />
-                </motion.div>
+              <motion.div
+                className="absolute -left-8 bottom-20 p-4 bg-[#0C0C14]/80 backdrop-blur-xl rounded-xl border border-gray-800"
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                }}
+              >
+                <Globe className="w-6 h-6 text-blue-400" />
               </motion.div>
             </motion.div>
           </div>
@@ -543,7 +537,7 @@ const Portfolio = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 0 }}
                         whileHover={{ opacity: 1 }}
-                        transition={{ duration: 0.2 }} 
+                        transition={{ duration: 0.2 }}
                         className="absolute inset-0 bg-black/60 flex items-center justify-center gap-6"
                       >
                         <motion.a
@@ -737,77 +731,8 @@ const Portfolio = () => {
               you're into web3 and interested in hackathons & crypto..
             </p>
           </motion.div>
-        </motion.div>
-      </section>
 
-      <section id="contact" className="min-h-screen py-20 px-6">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto"
-        >
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Get in Touch
-            </span>
-          </h2>
-
-          <InteractiveCard className="p-8">
-            <form className="space-y-6">
-              <div className="space-y-2">
-                <label className="block text-gray-300">Who you are?</label>
-                <input
-                  type="email"
-                  value={messageSent?.email}
-                  placeholder="enter your email or name"
-                  onChange={(e) => {
-                    e.preventDefault();
-                    setMessageSent({ ...messageSent, email: e.target.value });
-                  }}
-                  className="w-full px-4 py-3 bg-gray-800/50 rounded-lg border border-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-colors"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="block text-gray-300">Message</label>
-                <textarea
-                  value={messageSent?.message}
-                  placeholder="Type your message here..."
-                  onChange={(e) => {
-                    e.preventDefault();
-                    setMessageSent({ ...messageSent, message: e.target.value });
-                  }}
-                  rows={4}
-                  required
-                  className="w-full px-4 py-3 bg-gray-800/50 rounded-lg border border-gray-700 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-colors"
-                />
-              </div>
-              <motion.button
-                onClick={() => {
-                  // if (!messageSent.email || !messageSent.message) {
-                  //   return;
-                  // }
-                  // if (
-                  //   messageSent.email.length === 0 ||
-                  //   messageSent.message.length === 0
-                  // ) {
-                  //   return;
-                  // }
-                  // setMessageSent({
-                  //   email: "",
-                  //   message: "",
-                  // });
-                }}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg font-semibold"
-              >
-                Send Message
-              </motion.button>
-            </form>
-          </InteractiveCard>
-
-          <div className="mt-12 flex justify-center gap-6">
+          <div id="contact" className="mt-12 flex justify-center gap-6">
             <motion.a
               href="https://github.com/Pavan-personal"
               whileHover={{ scale: 1.1 }}
