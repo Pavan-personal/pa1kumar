@@ -723,8 +723,8 @@ const Portfolio = () => {
             </p>
           </motion.div>
 
-          <div id="contact" className="flex flex-col rounded-lg my-6 items-center py-6 relative justify-center sm:gap-6 bg-[rgba(0,0,0,0.5)]">
-            <div className="flex rounded-lg sm:my-6 items-center py-6 relative justify-center gap-6">
+          <div id="contact" className="flex flex-col rounded-lg my-6 items-center py-6 relative justify-center sm:gap-2 bg-[rgba(0,0,0,0.5)]">
+            <div className="flex rounded-lg sm:my-3 items-center py-2 relative justify-center gap-6">
               <motion.a
                 href="https://github.com/Pavan-personal"
                 whileHover={{ scale: 1.1 }}
@@ -769,7 +769,7 @@ const Portfolio = () => {
               </motion.a>
             </div>
 
-            <h2 className="text-[4.5rem] sm:text-[7rem] opacity-60 sm:absolute static sedgwick-ave-display-regular font-bold text-center">
+            <h2 className="text-[4.5rem] sm:text-[7rem] opacity-60 static sedgwick-ave-display-regular font-bold text-center">
               <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
                 My Socials
               </span>
