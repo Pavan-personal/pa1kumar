@@ -203,7 +203,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="bg-[#050507] select-none min-h-screen text-gray-200">
+    <div className="select-none min-h-screen text-gray-200">
       <CursorFollower />
 
       <div className="fixed inset-0">
@@ -344,7 +344,7 @@ const Portfolio = () => {
               >
                 <motion.a
                   whileHover={{ scale: 1.05 }}
-                  href="#interests"
+                  href="#contact"
                   whileTap={{ scale: 0.95 }}
                   className="px-6 md:px-8 py-2 md:py-3 text-sm md:text-base bg-gradient-to-r from-blue-500 to-purple-500 rounded-full font-semibold"
                 >
@@ -723,7 +723,7 @@ const Portfolio = () => {
             </p>
           </motion.div>
 
-          <div className="flex flex-col rounded-lg my-6 items-center py-6 relative justify-center sm:gap-6 bg-[rgba(0,0,0,0.5)]">
+          <div id="contact" className="flex flex-col rounded-lg my-6 items-center py-6 relative justify-center sm:gap-6 bg-[rgba(0,0,0,0.5)]">
             <div className="flex rounded-lg sm:my-6 items-center py-6 relative justify-center gap-6">
               <motion.a
                 href="https://github.com/Pavan-personal"
