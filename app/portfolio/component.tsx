@@ -145,7 +145,7 @@ const Portfolio = () => {
       tech: ["MERN", "Firebase", "Tailwind CSS"],
       links: {
         github: "https://github.com/Pavan-personal/recipePublic",
-        live: "https://recipe-app-r3eo.vercel.app",
+        live: "https://cookshare.vercel.app",
       },
     },
     {
@@ -155,7 +155,7 @@ const Portfolio = () => {
       tech: ["MERN", "Tailwind CSS", "Chart.js"],
       links: {
         github: "https://github.com/Pavan-personal/EmployeeManagementPublic",
-        live: "https://smartemployee-managementystem.vercel.app",
+        live: "https://team-wise.vercel.app",
       },
     },
   ];
