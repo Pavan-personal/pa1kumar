@@ -178,8 +178,8 @@ const Portfolio = () => {
       type: "Internship",
       period: "2024 May - 2024 July",
       achievements: [
-        "Built responsive web applications using MERN.",
-        "Worked on e-commerece end-to-end.",
+        "Built responsive web pages Tailwind.",
+        "Worked on e-commerce end-to-end.",
         "Reduced load times by 60%.",
       ],
     },
