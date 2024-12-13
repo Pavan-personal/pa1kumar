@@ -149,7 +149,7 @@ const Portfolio = () => {
       },
     },
     {
-      title: "Employee: Attendance & data management",
+      title: "Team Wise: Efficient team management",
       description:
         "Organizational specific employee management system with attendance portal.",
       tech: ["MERN", "Tailwind CSS", "Chart.js"],
