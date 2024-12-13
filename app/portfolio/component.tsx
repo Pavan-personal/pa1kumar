@@ -48,7 +48,7 @@ const CursorFollower = () => {
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
-  const resumeLink = "https://drive.google.com/uc?export=download&id=1W2GzkqbvAi-WgyfrS5LDK38aZJuYt_S-";
+  const resumeLink = "https://docs.google.com/document/d/1rFKZES_HG5bi1dZT25bE0uW7ld8V9lJElLx48D-soUo";
 
   const InteractiveCard = ({
     children,
