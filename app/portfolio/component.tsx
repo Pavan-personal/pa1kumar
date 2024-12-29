@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import MyImg from "./image/MyImg.jpeg";
+import MyImg from "./image/MyImg.jpg";
 import X from "./image/x.png";
 import github from "./image/github-logo.png";
 import mail from "./image/email.png";
